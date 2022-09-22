@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: email-trigger
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    topic:
+      name: ultra_coin_topic
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ultra.coin.start@gmail.com
+    password: jggwmuhltmaavpny
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  server:
+    port: 8082
